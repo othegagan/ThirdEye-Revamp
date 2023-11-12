@@ -1,0 +1,17 @@
+<div class="layout-topbar">
+    <a class="layout-topbar-logo" routerLink="">
+        <!-- <img src="assets/layout/images/{{layoutService.config.colorScheme === 'light' ? 'logo-dark' : 'logo-white'}}.svg" alt="logo"> -->
+        <span>SAKAI</span>
+    </a>
+
+    <button #menubutton class="p-link layout-menu-button layout-topbar-button" (click)="layoutService.onMenuToggle()">
+        <i class="pi pi-bars"></i>
+    </button>
+
+    <button class="p-link layout-topbar-button small-menu" type="button" pButton (click)="menu.toggle($event)">
+        <i class="pi pi-user"></i>
+    </button>
+    <!-- <h5 class="text-base ml-2">Gagan Kumar</h5> -->
+
+    <p-menu #menu [popup]="true" [model]="menuItems"></p-menu>
+</div>
